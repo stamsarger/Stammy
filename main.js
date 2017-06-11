@@ -252,11 +252,6 @@ fs.readdir("./commands", function(err, files)
     		{
     			return;
     		}
-            if(text.indexOf("@" + bot.botName) == 0)
-            {
-                var args = text.substr(1).split(" ").slice(1).join(" ").trim().split(" ");
-                bot.commands.all.ai(session, bot, "ai", args, nick, text, time, isAdmin, trip);
-            }
     		if(text[0] == bot.data.prefix)
     		{
     			var args = text.substr(1).split(" ");
